@@ -1,0 +1,77 @@
+{
+	"debug": true,
+	"cluster": false,
+	"token_api_port": 8000,
+	"token_data_port": 3001,
+	"weixin_port": 3000,
+	"upload_max_size": 500,
+	"ase_key": "65d460d57ddfd8865d17e652b6d530cc",
+	"website": {
+		"domain": "wx.bosjk.com",
+		"appid": "wxbbc400d237bf5ef7",
+		"secret": "770a9ca390e3b7a0a46b7b1ab5fc4e9b",
+		"site_token": "nDepFSF5TpkgvaxveGJh",
+		"openid_expire": 31536000000,
+		"jsApiList": [
+			"chooseImage",
+			"uploadImage",
+			"chooseWXPay",
+			"previewImage"
+		]
+	},
+	"cache": {
+		"enable": true,
+		"expire": 300,
+		"options": {
+			"usePromise": true
+		},
+		"nodes": [
+			{
+				"port": "6789",
+				"host": "172.16.3.190"
+			}
+		]
+	},
+	"mongo": {
+		"host": "172.16.3.190",
+		"user": "test",
+		"password": "123",
+		"database": "test",
+		"port": 22222
+	},
+	"db": {
+		"master": {
+			"host": "172.16.13.170",
+			"user": "root",
+			"password": "123456",
+			"database": "mtt_dev",
+			"port": 3306,
+			"connectTimeout": 2000,
+			"connectionLimit": 100,
+			"multipleStatements": true,
+			"timeout": 3000
+		},
+		"slave1": {
+			"host": "172.16.13.170",
+			"user": "root",
+			"password": "123456",
+			"database": "mtt_dev",
+			"port": 3306,
+			"connectTimeout": 2000,
+			"connectionLimit": 100,
+			"multipleStatements": true,
+			"timeout": 3000
+		},
+		"slave2": {
+			"host": "172.16.13.170",
+			"user": "root",
+			"password": "123456",
+			"database": "mtt_dev",
+			"port": 3306,
+			"connectTimeout": 2000,
+			"connectionLimit": 100,
+			"multipleStatements": true,
+			"timeout": 3000
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "bosjk-node",
+	"version": "1.0.0",
+	"repository": {},
+	"devDependencies": {
+		"cluster": "0.7.7",
+		"cron": "1.0.9",
+		"crypto": "0.0.3",
+		"express": "4.13.1",
+		"node-expat": "2.3.11",
+		"node-uuid": "1.4.7",
+		"q": "1.4.1",
+		"qr-image": "3.1.0",
+		"autoredis": "1.2.3",
+		"request": "^2.67.0",
+		"formidable": "1.0.17",
+		"node-expat": "2.3.11"
+	},
+	"engines": {
+		"node": ">=5.1.1",
+		"node-gyp": ">=3.0.3",
+		"npm": ">=3.3.12"
+	},
+	"dependencies": {
+		"bling-hashes": "^1.1.1"
+	}
+}
