@@ -3,8 +3,8 @@ var express = require('express');
 var qs = require('querystring');
 var mongo = require('autoredis').mongo;
 var cache = require('autoredis').cache;
-var secret = require('common').secret;
-var common = require('common').common;
+var secret = require('wx-common').secret;
+var common = require('wx-common').common;
 
 var app = express();
 

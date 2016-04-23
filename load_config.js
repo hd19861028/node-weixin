@@ -1,6 +1,6 @@
 "use strict";
 
-var fi = require('common').fileinfo;
+var fi = require('wx-common').fileinfo;
 var path = require('path');
 var json = require("./config");
 
@@ -16,4 +16,4 @@ global.ckey = {
 	openid: "openid"
 };
 
-require('common').prototype;
+require('wx-common').prototype;

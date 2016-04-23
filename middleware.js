@@ -1,9 +1,9 @@
 var querystring = require('querystring');
 var mongo = require('autoredis').mongo;
 var cache = require('autoredis').cache;
-var common = require('common').common;
+var common = require('wx-common').common;
 
-var Secret = require('common').secret;
+var Secret = require('wx-common').secret;
 var secret = new Secret();
 
 exports = module.exports;

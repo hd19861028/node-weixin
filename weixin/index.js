@@ -3,10 +3,10 @@ var express = require('express');
 var app = express();
 var crypto = require("crypto");
 var common = require("common").common;
-var weixin = require('common').weixin;
-var request = require('common').request;
+var weixin = require('wx-common').weixin;
+var request = require('wx-common').request;
 var q = require('q');
-var db = require('common').db;
+var db = require('wx-common').db;
 
 exports = module.exports;
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var querystring = require('querystring');
-var common = require('common').common;
-var ws = require('common').weixin;
+var common = require('wx-common').common;
+var ws = require('wx-common').weixin;
 
 var wxapi = express();
 
