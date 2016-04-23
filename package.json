@@ -14,7 +14,8 @@
 		"autoredis": "1.2.3",
 		"request": "^2.67.0",
 		"formidable": "1.0.17",
-		"node-expat": "2.3.11"
+		"node-expat": "2.3.11",
+		"wx-common": "1.0.0"
 	},
 	"engines": {
 		"node": ">=5.1.1",
