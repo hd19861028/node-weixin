@@ -1,6 +1,6 @@
 var querystring = require('querystring');
-var mongo = require('common').mongo;
-var cache = require('common').cache;
+var mongo = require('autoredis').mongo;
+var cache = require('autoredis').cache;
 var common = require('common').common;
 
 var Secret = require('common').secret;

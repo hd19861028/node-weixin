@@ -1,8 +1,8 @@
 "use strict";
 var express = require('express');
 var qs = require('querystring');
-var mongo = require('common').mongo;
-var cache = require('common').cache;
+var mongo = require('autoredis').mongo;
+var cache = require('autoredis').cache;
 var secret = require('common').secret;
 var common = require('common').common;
 

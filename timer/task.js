@@ -1,7 +1,7 @@
 var CronJob = require('cron').CronJob;
 var fs = require('fs');
 var path = require('path');
-var cache = require('common').cache;
+var cache = require('autoredis').cache;
 
 /**
  * Seconds: 0-59
