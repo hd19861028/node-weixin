@@ -38,6 +38,8 @@ app.get("/token/get", function(req, res) {
 				mongo.close();
 				res.json(data);
 			})
+		}, function(err){
+			console.log(err)
 		})
 });
 
