@@ -16,11 +16,10 @@ var taskdesc = [
 function run(name) {
 	var d = Promise.defer();
 	exec(name, function(error, stdout, stderr) {
-		if (error) {
-			d.reject(error)
-		} else {
-			d.resolve(stdout)
-		}
+		d.resolve({
+			error: error, 
+			out: stdout
+		})
 	});
 	return d.promise;
 }
@@ -28,18 +27,13 @@ function run(name) {
 fs.writeFileSync('log/error.log', '')
 fs.writeFileSync('log/info.log', '')
 
-function Error(msg) {
-	console.error(msg)
-	fs.appendFileSync('log/error.log', msg)
-	Finally();
-}
-
-function Info(msg) {
-	fs.appendFileSync('log/info.log', msg)
-	Finally();
-}
-
-function Finally(){
+function Finally(msg, iserror){
+	var log = 'log/info.log';
+	if(iserror == true){
+		log = 'log/error.log';
+		console.error(msg)
+	}
+	fs.appendFileSync(log, msg)
 	isrun = false;
 	console.timeEnd('执行时间')
 }
@@ -54,11 +48,13 @@ var timer = setInterval(function() {
 			console.log(desc)
 			console.time('执行时间')
 			run(task)
-				.then(function(out) {
-					Info(out)
-				}, function(err) {
-					tasklist = [];
-					Error(err.stack)
+				.then(function(data) {
+					var issuccess = true;
+					if(data.error){
+						tasklist = [];
+						issuccess = false;
+					}
+					Finally(data.out, !issuccess)
 				})
 		} else {
 			clearInterval(timer)
