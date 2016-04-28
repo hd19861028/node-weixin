@@ -48,10 +48,11 @@ exports.cookieParse = function(req, res, next) {
 
 exports.accessToken = function(req, res, next) {
 	var token = req.query.access_token;
+	var pub = req.cookiesSafe('publickey');
 	var hash = common.hash(token);
-	cache.get(hash)
+	cache.get(pub)
 		.then(function(value) {
-			if (value === "OK") {
+			if (value === hash) {
 				next();
 			} else {
 				res.status(403).send('access token is rejected')

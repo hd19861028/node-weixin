@@ -7,6 +7,8 @@ var tokenAPI = express();
 var tokenDATA = express();
 
 weixin.use(middleware.cookieParse);
+tokenAPI.use(middleware.cookieParse);
+tokenDATA.use(middleware.cookieParse);
 tokenDATA.use(middleware.accessToken);
 
 exports = module.exports;

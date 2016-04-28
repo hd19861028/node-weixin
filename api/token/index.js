@@ -33,7 +33,8 @@ app.get("/token/get", function(req, res) {
 					data.code = 200;
 					data.expire = 7200;
 					data.access_token = access_token;
-					cache.set(hash, "OK", 7200);
+					cache.set(pub, hash, 7200);
+					res.setCookiesSafe('publickey', pub)
 				}
 				mongo.close();
 				res.json(data);
