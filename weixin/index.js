@@ -5,7 +5,7 @@ var crypto = require("crypto");
 var common = require("wx-common").common;
 var weixin = require('wx-common').weixin;
 var request = require('wx-common').request;
-var q = require('q');
+var q = Promise;
 var db = require('wx-common').db;
 
 exports = module.exports;
