@@ -14,7 +14,7 @@
 		"request": "^2.67.0",
 		"formidable": "1.0.17",
 		"node-expat": "2.3.11",
-		"wx-common": "1.1.4"
+		"wx-common": "1.1.6"
 	},
 	"engines": {
 		"node": ">=5.1.1",
